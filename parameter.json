@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "srinad17": {
+      "type": "string",
+      "metadata": {
+        "description": "description"
+      }
+    }
+  },
+  "functions": [],
+  "variables": {},
+  "resources": [
+{
+  "name": "[parameters('srinad17')]",
+  "type": "Microsoft.Storage/storageAccounts",
+  "apiVersion": "2023-01-01",
+  "tags": {
+    "displayName": "[parameters('srinad17')]"
+  },
+  "location": "[resourceGroup().location]",
+  "kind": "StorageV2",
+  "sku": {
+    "name": "Premium_LRS",
+    "tier": "Premium"
+  }
+}
+  ],
+  "outputs": {}
+}
